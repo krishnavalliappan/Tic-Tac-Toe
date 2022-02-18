@@ -43,6 +43,7 @@ def check_data():
 
 
 def add_data(player_symbl: str, player_name):
+    clear()
     if not player_name == "Computer":
         while True:
             selection = re.findall("[0-9]+", input(
@@ -61,7 +62,6 @@ def add_data(player_symbl: str, player_name):
                 elements[row - 1][column - 1] = player_symbl
                 print(f"Symbol added in ({row}, {column})")
                 break
-    clear()
     print_result()
     win_symbol = check_data()
     if win_symbol:
